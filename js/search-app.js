@@ -2,17 +2,22 @@
 const url = 'https://scmq7n.a.searchspring.io/api/search/search.json';
 
 $(document).ready(function() {
-    $('#searchInput').keypress(function(e) {
-        if (e.which === 13) {
+    $('#searchInput').keypress(function (e) {
+        var key = e.which;
+        if(key == 13)
+        {
             $('#submitBtn').click();
+            return false;
         }
     });
-    $('#submitBtn').click(function() {
+    $('#submitBtn').on('click', function() {
         let search = $('#searchInput').val();
+        let pageNumber = $('#page').val();
         console.log(search);
         $.get(url, {
             siteId: "scmq7n",
             q: search,
+            page: pageNumber,
             resultsFormat: "native"
         }).done(function (data) {
             handleResponse(data)
@@ -43,5 +48,3 @@ function handleResponse(data) {
     })
     $('#searchResults').html(html);
 }
-
-
