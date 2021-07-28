@@ -46,5 +46,19 @@ function handleResponse(data) {
         html += '</div>';
         html += '</div>';
     })
-    $('#searchResults').html(html);
+    $('#searchResults').html(html).pageMe({
+        pagerSelector:'#myPager'
+    });
+
 }
+
+$('#searchResults').pageMe({
+    pagerSelector:'#myPager',
+    activeColor: 'dark gray',
+    perPage: 9,
+    showPrevNext: false,
+    nextText: '',
+    prevText: '',
+    hidePageNumbers: false
+});
+
