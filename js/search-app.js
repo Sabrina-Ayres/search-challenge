@@ -12,7 +12,7 @@ $(document).ready(function () {
     $('#submitBtn').on('click', function () {
         $('#myPager, #btmPager').empty();
         let search = $('#searchInput').val();
-        $('#resultsDisplay').html(search);
+        $('#searchedItem').html("You searched for '" + search + "'");
         $.get(url, {
             siteId: "scmq7n",
             q: search,
@@ -51,11 +51,12 @@ function handleResponse(data) {
 
 $('#searchResults').pageMe({
     pagerSelector: '#myPager, #btmPager',
-    activeColor: '#EDB6A3',
+    activeColor: 'lightgrey',
     perPage: 9,
     showPrevNext: false,
     nextText: '',
     prevText: '',
     hidePageNumbers: false
 });
+
 

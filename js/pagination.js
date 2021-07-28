@@ -1,7 +1,7 @@
 $.fn.pageMe = function(opts){
     var $this = this,
         defaults = {
-            activeColor: 'blue',
+            activeColor: 'lightgrey',
             perPage: 9,
             showPrevNext: true,
             nextText: '',
@@ -25,8 +25,6 @@ $.fn.pageMe = function(opts){
 
     var numItems = children.size();
     var numPages = Math.ceil(numItems/perPage);
-    
-    // $("#total_reg").html(numItems+" Entries In Total");
 
     pager.data("curr",0);
 
@@ -49,7 +47,7 @@ $.fn.pageMe = function(opts){
     if (numPages<=1) {
         pager.find('.next_link').hide();
     }
-  	pager.children().eq(1).addClass("active "+settings.activeColor);
+  	pager.children().eq(1).addClass("active");
 
     children.hide();
     children.slice(0, perPage).show();
@@ -99,8 +97,8 @@ $.fn.pageMe = function(opts){
         }
 
         pager.data("curr",page);
-      	pager.children().removeClass("active "+settings.activeColor);
-        pager.children().eq(page+1).addClass("active "+settings.activeColor);
+      	pager.children().removeClass("active");
+        pager.children().eq(page+1).addClass("active");
 
     }
 };
