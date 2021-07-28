@@ -1,7 +1,7 @@
 $.fn.pageMe = function(opts){
     var $this = this,
         defaults = {
-            activeColor: 'black',
+            activeColor: 'blue',
             perPage: 9,
             showPrevNext: true,
             nextText: '',
@@ -104,3 +104,5 @@ $.fn.pageMe = function(opts){
 
     }
 };
+
+// https://www.jqueryscript.net/table/jQuery-Table-Pagination-For-Materialize.html

@@ -1,6 +1,83 @@
 
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;600&family=Open+Sans&display=swap');
+/*font-family: 'El Messiri', sans-serif;*/
+/*font-family: 'Open Sans', sans-serif;*/
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.cov-img {
+    position: relative;
+    text-align: right;
+    color: black;
+    margin-top: 50px;
+    height: 350px;
+    margin-bottom: 100px;
+}
+
+.branding {
+    position: relative;
+    color: black;
+    height: 400px;
+    overflow: hidden;
+}
+
+h2 {
+    font-family: 'El Messiri', sans-serif;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+input,
+button {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    outline:none;
+}
+
+input {
+    border: 1px solid black;
+    margin: 5px 0 10px;
+    font-size: 1rem;
+}
+
+button {
+    display: block;
+    color: black;
+    background-color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 5px 20px black;
+    outline:none;
+    transition: box-shadow .3s ease-in-out;
+}
+
+button:hover {
+    box-shadow: none;
+}
+
+.position {
+    left: 66%;
+    top: 30%;
+    width: 300px;
+    position: absolute;
+    display: inline-block;
+    margin-right: 0;
+}
+
 .card-div {
     border: none;
+}
+
+.card-img-container {
+    width: 18rem;
+    length: 28rem;
 }
 
 .card-img {
@@ -8,4 +85,60 @@
     height: 100%;
     object-fit: contain;
     align-content: center;
+}
+
+.name {
+    font-family: 'El Messiri', sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: left;
+    margin-top: -2em;
+}
+
+.pricing {
+    font-family: 'El Messiri', sans-serif;
+    font-size: .7em;
+    text-align: right;
+    margin: 1em;
+}
+
+.sale {
+    text-decoration: line-through;
+}
+
+.pager {
+    font-family: 'El Messiri', sans-serif;
+    font-size: 1.5em;
+}
+
+a {
+    margin-right: 1em;
+    color: black;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+a:active::after {
+    opacity: 0.7;
+    text-decoration: underline;
+}
+
+i {
+    margin-top: 2px;
+}
+
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.7;
+}
+
+h3 {
+    font-family: 'El Messiri', sans-serif;
+    font-size: 2em;
+    color: black;
+    text-transform: uppercase;
+    float: left;
 }
